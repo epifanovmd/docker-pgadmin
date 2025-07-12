@@ -19,7 +19,7 @@ sudo apt-get install docker-compose
 Создание ssh ключей и копирование на сервер
 ```
 ssh-keygen -t rsa -b 4096 -C "ssh-comment" -f ssh_name
-ssh-copy-id -i ~/.ssh/ssh_name.pub root@147.45.133.109  
+ssh-copy-id -i ~/.ssh/ssh_name.pub root@147.45.245.104 
 ```
 
 - ### На стороне сервера
@@ -47,7 +47,7 @@ $ git clone https://github.com/epifanovmd/docker-pgadmin.git
 ### Run
 ```sh
 $ cd docker-pgadmin
-$ docker compose -f compose.yml up --force-recreate -d
+$ bash start.sh
 ```
 
 ---

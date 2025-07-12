@@ -1,10 +1,10 @@
 #!/bin/bash
 
-SSH_HOST="147.45.133.109"
+SSH_HOST="147.45.245.104"
 TIMESTAMP=$(date +"%F_%H:%M:%S")
 BACKUP_DIR="."
 CONTAINER_NAME="postgres"
 PG_USER="epifanovmd"
-PG_DB="postgres"
+PG_DB="main"
 
 ssh  root@$SSH_HOST docker exec $CONTAINER_NAME pg_dump -U $PG_USER -d $PG_DB -F c -b > "$BACKUP_DIR/db_backup_$TIMESTAMP.dump"
